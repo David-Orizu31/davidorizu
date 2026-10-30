@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>David Orizu | Software Engineer</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <style>
+
+        *{
+            font-family: 'Outfit', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body{
+            background: #0f172a;
+            overflow-x: hidden;
+        }
+
+        .hero-gradient{
+            background:
+                radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 35%),
+                radial-gradient(circle at bottom right, rgba(139,92,246,0.25), transparent 35%),
+                #0f172a;
+        }
+
+        .glass{
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .glow-btn{
+            box-shadow: 0 0 20px rgba(59,130,246,0.45);
+        }
+
+        .avatar-ring{
+            animation: pulseRing 3s infinite;
+        }
+
+        @keyframes pulseRing {
+
+            0%{
+                box-shadow: 0 0 0 0 rgba(59,130,246,0.6);
+            }
+
+            70%{
+                box-shadow: 0 0 0 25px rgba(59,130,246,0);
+            }
+
+            100%{
+                box-shadow: 0 0 0 0 rgba(59,130,246,0);
+            }
+
+        }
+
+        .floating{
+            animation: floating 4s ease-in-out infinite;
+        }
+
+        @keyframes floating{
+
+            0%{
+                transform: translateY(0px);
+            }
+
+            50%{
+                transform: translateY(-12px);
+            }
+
+            100%{
+                transform: translateY(0px);
+            }
+
+        }
+
+        .grid-bg{
+            background-image:
+            linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+            background-size: 40px 40px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tab-active {
+            background: #3b82f6;
+        }
+
+        .mobile-menu{
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .mobile-menu.show{
+            max-height: 500px;
+        }
+
+        input::placeholder,
+        textarea::placeholder{
+            color: #94a3b8;
+        }
+
+    </style>
+
+</head>
+
+<body class="text-white hero-gradient grid-bg">
+
+<!-- ===================================================== -->
+<!-- NAVBAR -->
+<!-- ===================================================== -->
+
+<header class="fixed top-0 left-0 w-full z-50 glass">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4">
+
+        <div class="flex items-center justify-between">
+
+            <a href="#home" class="text-2xl font-extrabold tracking-wide">
+                David<span class="text-blue-400">.</span>
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+
+                <a href="#home" class="hover:text-blue-400 transition">
+                    Home
+                </a>
+
+                <a href="#about" class="hover:text-blue-400 transition">
+                    About
+                </a>
+
+                <a href="#skills" class="hover:text-blue-400 transition">
+                    Skills
+                </a>
+
+                <a href="#projects" class="hover:text-blue-400 transition">
+                    Projects
+                </a>
+
+                <a href="#experience" class="hover:text-blue-400 transition">
+                    Experience
+                </a>
+
+                <a href="#education" class="hover:text-blue-400 transition">
+                    Education
+                </a>
+
+                <a href="#blog" class="hover:text-blue-400 transition">
+                    Blog
+                </a>
+
+                <a href="#contact" class="hover:text-blue-400 transition">
+                    Contact
+                </a>
+
+            </nav>
+
+            <!-- MOBILE BUTTON -->
+            <button id="menuBtn" class="md:hidden text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="mobile-menu md:hidden">
+
+            <div class="flex flex-col gap-5 pt-6 pb-4 text-sm font-medium">
+
+                <a href="#home" class="hover:text-blue-400 transition">
+                    Home
+                </a>
+
+                <a href="#about" class="hover:text-blue-400 transition">
+                    About
+                </a>
+
+                <a href="#skills" class="hover:text-blue-400 transition">
+                    Skills
+                </a>
+
+                <a href="#projects" class="hover:text-blue-400 transition">
+                    Projects
+                </a>
+
+                <a href="#experience" class="hover:text-blue-400 transition">
+                    Experience
+                </a>
+
+                <a href="#education" class="hover:text-blue-400 transition">
+                    Education
+                </a>
+
+                <a href="#blog" class="hover:text-blue-400 transition">
+                    Blog
+                </a>
+
+                <a href="#contact" class="hover:text-blue-400 transition">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ===================================================== -->
+<!-- HERO SECTION -->
+<!-- ===================================================== -->
+
+<section id="home" class="min-h-screen flex items-center pt-28 pb-20">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- LEFT -->
+        <div>
+
+            <p class="text-blue-400 font-semibold tracking-widest uppercase mb-4">
+                Software Engineer
+            </p>
+
+            <h1 class="text-5xl lg:text-7xl font-extrabold leading-tight mb-6">
+
+                Hi, I'm
+
+                <span class="text-blue-400">
+                    David Orizu
+                </span>
+
+            </h1>
+
+            <p class="text-slate-300 text-lg leading-relaxed mb-8 max-w-2xl">
+
+                Full-stack developer with strong passion for backend engineering,
+                scalable web applications, desktop applications and emerging technologies.
+                Experienced in Laravel, with working knowledge of Django, Vue.js, and Electron.js. 
+                Also familiar with IoT systems, basic machine learning, and PCB design fundamentals.
+
+            </p>
+
+            <!-- BUTTONS -->
+            <div class="flex flex-wrap gap-4 mb-10">
+
+                <a href="#projects"
+                   class="px-7 py-4 rounded-full bg-blue-500 hover:bg-blue-600 transition font-semibold glow-btn">
+
+                    View Projects
+
+                </a>
+
+                <a href="#contact"
+                   class="px-7 py-4 rounded-full border border-slate-600 hover:border-blue-400 hover:text-blue-400 transition font-semibold">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+            <!-- SKILLS -->
+            <div class="flex flex-wrap gap-3">
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    PHP
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    Laravel
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    Python
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    Django
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    Vue.js
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    JavaScript
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    TypeScript
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    Electron JS
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    MySQL
+                </span>
+
+                <span class="glass px-4 py-2 rounded-full text-sm">
+                    SQLite
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="relative flex justify-center lg:justify-end">
+
+            <!-- BACKGROUND -->
+            <div class="absolute w-[420px] h-[420px] bg-blue-500/20 blur-3xl rounded-full"></div>
+
+            <!-- CARD -->
+            <div class="relative glass p-6 rounded-[40px] floating">
+
+                <div class="avatar-ring rounded-full p-2 bg-gradient-to-r from-blue-500 to-violet-500">
+
+                    <img
+                        src="img/profile-pic.jpeg"
+                        alt="David Orizu"
+                        class="w-[320px] h-[320px] object-cover rounded-full border-4 border-slate-900"
+                    />
+
+                </div>
+
+                <!-- EXPERIENCE -->
+                <div class="absolute -bottom-6 -left-3 lg:-left-8 glass px-6 py-4 rounded-2xl">
+
+                    <h3 class="text-3xl font-bold text-blue-400">
+                        6+
+                    </h3>
+
+                    <p class="text-sm text-slate-300">
+                        Years Experience
+                    </p>
+
+                </div>
+
+                <!-- TECH -->
+                <div class="absolute -top-6 -right-3 lg:-right-6 glass px-5 py-4 rounded-2xl">
+
+                    <div class="flex items-center gap-3">
+
+                        <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center">
+
+                            <i class="fa-solid fa-code text-xl"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4 class="font-semibold">
+                                Backend Focused
+                            </h4>
+
+                            <p class="text-xs text-slate-400">
+                                APIs • Systems • Architecture
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SOCIAL LINKS -->
+<!-- ===================================================== -->
+
+<section class="pb-16">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="glass rounded-3xl p-6 flex flex-wrap items-center justify-between gap-6">
+
+            <div>
+
+                <h2 class="text-2xl font-bold mb-2">
+                    Let's Build Something Great
+                </h2>
+
+                <p class="text-slate-400">
+                    Open for collaborations, internships and software projects.
+                </p>
+
+            </div>
+
+            <div class="flex items-center gap-5 text-2xl">
+
+                <a href="https://github.com/David-Orizu31" target="_blank"
+                   class="w-14 h-14 rounded-full glass flex items-center justify-center hover:bg-blue-500 transition">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+                <a href="https://linkedin.com/in/david-orizu-aba231315" target="_blank"
+                   class="w-14 h-14 rounded-full glass flex items-center justify-center hover:bg-blue-500 transition">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+                <a href="https://x.com/DavidOrizu31" target="_blank"
+                   class="w-14 h-14 rounded-full glass flex items-center justify-center hover:bg-blue-500 transition">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- ABOUT PREVIEW -->
+<!-- ===================================================== -->
+
+<section class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="grid lg:grid-cols-3 gap-8">
+
+            <div class="glass rounded-3xl p-8">
+
+                <div class="w-16 h-16 rounded-2xl bg-blue-500 flex items-center justify-center mb-6">
+
+                    <i class="fa-solid fa-layer-group text-2xl"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Full Stack Development
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+
+                    Building scalable web platforms, backend systems,
+                    APIs and dynamic user experiences using Laravel,
+                    Django and JavaScript.
+
+                </p>
+
+            </div>
+
+            <div class="glass rounded-3xl p-8">
+
+                <div class="w-16 h-16 rounded-2xl bg-violet-500 flex items-center justify-center mb-6">
+
+                    <i class="fa-solid fa-desktop text-2xl"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Desktop Applications
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+
+                    Creating offline and online desktop solutions
+                    with Electron JS and PHP Desktop for productivity
+                    and business workflows.
+
+                </p>
+
+            </div>
+
+            <div class="glass rounded-3xl p-8">
+
+                <div class="w-16 h-16 rounded-2xl bg-emerald-500 flex items-center justify-center mb-6">
+
+                    <i class="fa-solid fa-microchip text-2xl"></i>
+
+                </div>
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Emerging Technologies
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+
+                    Exposure to IoT systems, embedded solutions,
+                    PCB design fundamentals, data science and
+                    basic machine learning concepts.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- ABOUT SECTION -->
+<!-- ===================================================== -->
+
+<section id="about" class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="text-center mb-20">
+
+            <p class="text-blue-400 font-semibold tracking-widest uppercase mb-4">
+                About Me
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-extrabold mb-6">
+
+                Passionate About
+
+                <span class="gradient-text">
+                    Building Systems
+                </span>
+
+            </h2>
+
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div class="relative">
+
+                <div class="absolute inset-0 bg-blue-500/20 blur-3xl rounded-full"></div>
+
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+                    alt="About"
+                    class="relative rounded-[40px] w-full object-cover glass"
+                />
+
+            </div>
+
+            <div>
+
+                <h3 class="text-3xl font-bold mb-6 leading-snug">
+
+                    Building scalable digital experiences
+                    through backend engineering and modern technologies.
+
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed mb-6">
+
+                    My major focus is full-stack web development with deep interest
+                    in backend engineering. I enjoy building APIs, systems architecture,
+                    authentication workflows, dashboards and scalable software solutions.
+
+                </p>
+
+                <p class="text-slate-400 leading-relaxed mb-10">
+
+                    I've also explored Data Science, Embedded Systems,
+                    IoT technologies and PCB design through internships
+                    and academic experiences as an Electrical/Electronics Engineering student.
+
+                </p>
+
+                <div class="grid grid-cols-2 gap-6">
+
+                    <div class="glass rounded-3xl p-6">
+
+                        <h4 class="text-4xl font-extrabold text-blue-400 mb-2">
+                            25+
+                        </h4>
+
+                        <p class="text-slate-400">
+                            Projects Built
+                        </p>
+
+                    </div>
+
+                    <div class="glass rounded-3xl p-6">
+
+                        <h4 class="text-4xl font-extrabold text-violet-400 mb-2">
+                            6+
+                        </h4>
+
+                        <p class="text-slate-400">
+                            Years Experience
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- SKILLS SECTION -->
+<!-- ===================================================== -->
+
+<section id="skills" class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="text-center mb-20">
+
+            <p class="text-blue-400 font-semibold tracking-widest uppercase mb-4">
+                Skills
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-extrabold">
+
+                Technologies &
+
+                <span class="gradient-text">
+                    Tools
+                </span>
+
+            </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div class="glass rounded-3xl p-8 text-center">
+
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968332.png"
+                    class="w-20 h-20 object-contain mx-auto mb-6"
+                    alt="PHP"
+                />
+
+                <h3 class="text-2xl font-bold mb-4">
+                    PHP & Laravel
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+                    Backend systems, APIs and scalable applications.
+                </p>
+
+            </div>
+
+            <div class="glass rounded-3xl p-8 text-center">
+
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png"
+                    class="w-20 h-20 object-contain mx-auto mb-6"
+                    alt="Python"
+                />
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Python & Django
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+                    Backend development, automation and scripting.
+                </p>
+
+            </div>
+
+            <div class="glass rounded-3xl p-8 text-center">
+
+                <img
+                    src="img/icons/Vue.js.png"
+                    class="w-20 h-20 object-contain mx-auto mb-6"
+                    alt="Vue.js"
+                />
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Vue.js
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+                    Frontend interactions.
+                </p>
+
+            </div>
+
+            <div class="glass rounded-3xl p-8 text-center">
+
+                <img
+                    src="img/icons/TypeScript.png"
+                    class="w-20 h-20 object-contain mx-auto mb-6"
+                    alt="Typescript"
+                />
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Typescript
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+                    Typed superset of JavaScript.
+                </p>
+
+            </div>
+
+            <div class="glass rounded-3xl p-8 text-center">
+
+                <img
+                    src="img/icons/Electron.png"
+                    class="w-20 h-20 object-contain mx-auto mb-6"
+                    alt="Electron JS"
+                />
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Electron JS
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+                    Desktop applications.
+                </p>
+
+            </div>
+
+            <div class="glass rounded-3xl p-8 text-center">
+
+                <img
+                    src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png"
+                    class="w-20 h-20 object-contain mx-auto mb-6"
+                    alt="Database"
+                />
+
+                <h3 class="text-2xl font-bold mb-4">
+                    Databases
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed">
+                    MySQL and SQLite database management.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- PROJECTS SECTION -->
+<!-- ===================================================== -->
+
+        <section id="projects" class="py-24 px-6 lg:px-10">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-14">
+                    <p class="uppercase tracking-[5px] text-sky-400 font-semibold mb-4">My Projects</p>
+                    <h2 class="text-4xl md:text-5xl font-black">Featured Works</h2>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-4 mb-14">
+                    <button class="project-tab tab-active px-6 py-3 rounded-full glass" data-target="webProjects">
+                        Web Development
+                    </button>
+                    <button class="project-tab px-6 py-3 rounded-full glass" data-target="desktopProjects">
+                        Desktop Applications
+                    </button>
+                    <button class="project-tab px-6 py-3 rounded-full glass" data-target="mobileProjects">
+                        Mobile Apps
+                    </button>
+                </div>
+
+                <!-- WEB -->
+                <div id="webProjects" class="project-content grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="relative glass rounded-3xl overflow-hidden group">
+                        <a href="https://baggyland.tv/" target="_blank" rel="noopener noreferrer"
+                           class="project-website-link absolute top-4 right-4 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-gradient-to-r from-sky-400/75 via-sky-500/75 to-blue-600/75 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md transition hover:from-sky-400/90 hover:via-sky-500/90 hover:to-blue-600/90"
+                           aria-label="Visit School Management System website">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Visit Website
+                        </a>
+                        <div class="overflow-hidden">
+                            <img src="img/projects/web/baggyland/1.png"
+                                 class="h-60 w-full object-cover group-hover:scale-110 transition duration-500" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-xs">Laravel</span>
+                                <span class="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs">MySQL</span>
+                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">jQuery</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-2">Jun 2026</p>
+                            <h3 class="text-2xl font-bold mb-3">Baggyland Productions</h3>
+                            <p class="text-slate-300 mb-5">
+                                A media production company website developed to showcase film projects, promote talents, and manage multimedia training enrollment and casting call applications.
+                            </p>
+                            <button class="text-sky-400 font-semibold" onclick="openProjectModal(this)">
+                                View Details →
+                            </button>
+                        </div>
+                        <div class="project-desc hidden">
+                            <ul>
+                                <li>Developed the entire backend of the website using Laravel and MySQL, including database design and dynamic content management for the company's production portfolio and featured talents.</li>
+                                <li>Implemented a movie portfolio with production graphics, titles, descriptions, search filtering, and pagination, with links directing visitors to the respective YouTube videos.</li>
+                                <li>Built a featured talents section with talent profiles, booking request forms, and dedicated monologue pages displaying embedded YouTube performances.</li>
+                                <li>Developed a multimedia training enrollment form covering Graphics Design, Video Editing, Photography, Cinematography, Motion Graphics, and Digital Marketing.</li>
+                                <li>Implemented a casting calls management system that allows administrators to upload PDF documents and specify their active start and end dates.</li>
+                                <li>Created an interactive, month-based casting calls interface using jQuery and JavaScript, dynamically organizing documents into folders based on their start dates and displaying availability messages when no active casting calls exist.</li>
+                                <li>Integrated calls to action for the company's community WhatsApp channel and casting calls page.</li>
+                                <li>Implemented email notifications that forward website form submissions to the company's support email, while storing talent booking and multimedia training enrollment submissions in the database for administrative review.</li>
+                                <li>Deployed the website to a hosting server and configured the backend for production use.</li>
+                            </ul>
+                        </div>
+                        <div class="project-gallery hidden">
+                            <img src="img/projects/web/baggyland/2.png" alt="Baggyland Productions">
+                            <img src="img/projects/web/baggyland/3.png" alt="Baggyland Productions">
+                            <img src="img/projects/web/baggyland/4.png" alt="Baggyland Productions">
+                            <img src="img/projects/web/baggyland/5.png" alt="Baggyland Productions">
+                            <img src="img/projects/web/baggyland/6.png" alt="Baggyland Productions">
+                            <img src="img/projects/web/baggyland/7.png" alt="Baggyland Productions">
+                            <img src="img/projects/web/baggyland/8.png" alt="Baggyland Productions">
+                        </div>
+                    </article>
+
+                    <article class="relative glass rounded-3xl overflow-hidden group">
+                        <a href="https://trustfinmanagement.com.ng/" target="_blank" rel="noopener noreferrer"
+                           class="project-website-link absolute top-4 right-4 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-gradient-to-r from-sky-400/75 via-sky-500/75 to-blue-600/75 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md transition hover:from-sky-400/90 hover:via-sky-500/90 hover:to-blue-600/90"
+                           aria-label="Visit School Management System website">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Visit Website
+                        </a>
+                        <div class="overflow-hidden">
+                            <img src="img/projects/web/tfmcs/1.png"
+                                 class="h-60 w-full object-cover group-hover:scale-110 transition duration-500" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-xs">Laravel</span>
+                                <span class="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs">MySQL</span>
+                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">Paystack</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-2">Nov 2025 - Apr 2026</p>
+                            <h3 class="text-2xl font-bold mb-3">Trust Financial Management Cooperative Society</h3>
+                            <p class="text-slate-300 mb-5">
+                                A financial cooperative management web application supporting loan applications, payment processing, member account operations, transaction management, and financial record-keeping.
+                            </p>
+                            <button class="text-sky-400 font-semibold" onclick="openProjectModal(this)">
+                                View Details →
+                            </button>
+                        </div>
+                        <div class="project-desc hidden">
+                            <ul>
+                                <li>Developed loan application and payment workflows, including Paystack integration.</li>
+                                <li>Implemented account verification workflows involving BVN verification and webcam-based face capture.</li>
+                                <li>Built email OTP verification and account security workflows.</li>
+                                <li>Implemented transaction PIN functionality and internal fund transfers.</li>
+                                <li>Developed transaction statement generation with email delivery and downloadable statements.</li>
+                                <li>Implemented PDF generation for loan agreements with signature workflows.</li>
+                                <li>Built financial record-keeping features for income and expense tracking.</li>
+                                <li>Contributed to frontend and backend development, as well as application deployment.</li>
+                            </ul>
+                        </div>
+                        <div class="project-gallery hidden">
+                            <img src="img/projects/web/tfmcs/2.png" alt="TFMCS Client Dashboard">
+                            <img src="img/projects/web/tfmcs/3.png" alt="TFMCS Client Dashboard">
+                            <img src="img/projects/web/tfmcs/4.png" alt="TFMCS Client Dashboard">
+                            <img src="img/projects/web/tfmcs/5.png" alt="TFMCS Client Dashboard">
+                            <img src="img/projects/web/tfmcs/6.png" alt="TFMCS Client Dashboard">
+                            <img src="img/projects/web/tfmcs/7.png" alt="TFMCS Client Dashboard">
+                            <img src="img/projects/web/tfmcs/8.png" alt="TFMCS Client Dashboard">
+                            <img src="img/projects/web/tfmcs/9.png" alt="TFMCS Client Dashboard">
+                            <img src="img/projects/web/tfmcs/10.png" alt="TFMCS Client Dashboard">
+                        </div>
+                    </article>
+
+                    <article class="relative glass rounded-3xl overflow-hidden group">
+                        <a href="https://www.rivssconsph.edu.ng/" target="_blank" rel="noopener noreferrer"
+                           class="project-website-link absolute top-4 right-4 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-gradient-to-r from-sky-400/75 via-sky-500/75 to-blue-600/75 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md transition hover:from-sky-400/90 hover:via-sky-500/90 hover:to-blue-600/90"
+                           aria-label="Visit Business Dashboard website">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Visit Website
+                        </a>
+                        <div class="overflow-hidden">
+                            <img src="img/projects/web/rivers-state/1.png"
+                                 class="h-60 w-full object-cover group-hover:scale-110 transition duration-500" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-xs">Laravel</span>
+                                <span class="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs">MySQL</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-2">March 2025 - Jul 2025</p>
+                            <h3 class="text-2xl font-bold mb-3">Rivers State College of Nursing Sciences, Port Harcourt </h3>
+                            <p class="text-slate-300 mb-5">
+                                A public-facing institutional website and admission portal developed to support the college's online presence and digital admission application processes.
+                            </p>
+                            <button class="text-sky-400 font-semibold" onclick="openProjectModal(this)">
+                                View Details →
+                            </button>
+                        </div>
+                        <div class="project-desc hidden">
+                            <ul>
+                                <li>Developed both the institution's public website and its admission portal.</li>
+                                <li>Built online applicant registration and application form workflows, including applicant dashboards.</li>
+                                <li>Implemented document upload functionality to support the submission of admission requirements.</li>
+                                <li>Developed application status tracking and administrative functionality for managing and reviewing applications.</li>
+                                <li>Implemented email notifications to support communication with applicants.</li>
+                                <li>Supported admission-fee processing workflows based on manual bank transfers to the institution's official account; online payment gateway integration was not implemented.</li>
+                                <li>Contributed to the frontend and backend development of both applications.</li>
+                            </ul>
+                        </div>
+                        <div class="project-gallery hidden">
+                            <img src="img/projects/web/rivers-state/2.png" alt="Rivers State College of Nursing Sciences">
+                            <img src="img/projects/web/rivers-state/3.png" alt="Rivers State College of Nursing Sciences">
+                            <img src="img/projects/web/rivers-state/4.png" alt="Rivers State College of Nursing Sciences">
+                            <img src="img/projects/web/rivers-state/5.png" alt="Rivers State College of Nursing Sciences">
+                            <img src="img/projects/web/rivers-state/6.png" alt="Rivers State College of Nursing Sciences">
+                            <img src="img/projects/web/rivers-state/7.png" alt="Rivers State College of Nursing Sciences">
+                            <img src="img/projects/web/rivers-state/8.png" alt="Rivers State College of Nursing Sciences">
+                            <img src="img/projects/web/rivers-state/9.png" alt="Rivers State College of Nursing Sciences">
+                        </div>
+                    </article>
+
+                    <article class="relative glass rounded-3xl overflow-hidden group">
+                        <a href="https://idcardportal.ecwatech.edu.ng/" target="_blank" rel="noopener noreferrer"
+                           class="project-website-link absolute top-4 right-4 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-gradient-to-r from-sky-400/75 via-sky-500/75 to-blue-600/75 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md transition hover:from-sky-400/90 hover:via-sky-500/90 hover:to-blue-600/90"
+                           aria-label="Visit Business Dashboard website">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Visit Website
+                        </a>
+                        <div class="overflow-hidden">
+                            <img src="img/projects/web/eict/1.png"
+                                 class="h-60 w-full object-cover group-hover:scale-110 transition duration-500" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-xs">Laravel</span>
+                                <span class="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs">MySQL</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-2">Aug 2024 - Sep 2024</p>
+                            <h3 class="text-2xl font-bold mb-3">EICT Student ID Card Portal</h3>
+                            <p class="text-slate-300 mb-5">
+                                A web application designed to generate student ID cards as downloadable PDF documents, streamlining the production of student identification materials.
+                            </p>
+                            <button class="text-sky-400 font-semibold" onclick="openProjectModal(this)">
+                                View Details →
+                            </button>
+                        </div>
+                        <div class="project-desc hidden">
+                            <ul>
+                                <li>Developed the student ID card generation workflow.</li>
+                                <li>Implemented functionality for generating and downloading ID card documents in PDF format.</li>
+                                <li>Contributed to the application's development, implementation, and deployment.</li>
+                            </ul>
+                        </div>
+                        <div class="project-gallery hidden">
+                            <img src="img/projects/web/eict/2.png" alt="EICT Student ID Card Portal">
+                            <img src="img/projects/web/eict/3.png" alt="EICT Student ID Card Portal">
+                            <img src="img/projects/web/eict/4.png" alt="EICT Student ID Card Portal">
+                            <img src="img/projects/web/eict/5.png" alt="EICT Student ID Card Portal">
+                            <img src="img/projects/web/eict/6.png" alt="EICT Student ID Card Portal">
+                        </div>
+                    </article>
+
+                    <article class="relative glass rounded-3xl overflow-hidden group">
+                        <a href="https://regdp.org/" target="_blank" rel="noopener noreferrer"
+                           class="project-website-link absolute top-4 right-4 z-10 inline-flex items-center gap-2 rounded-full border border-white/20 bg-gradient-to-r from-sky-400/75 via-sky-500/75 to-blue-600/75 px-4 py-2 text-sm font-semibold text-white backdrop-blur-md transition hover:from-sky-400/90 hover:via-sky-500/90 hover:to-blue-600/90"
+                           aria-label="Visit Blog CMS Platform website">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            Visit Website
+                        </a>
+                        <div class="overflow-hidden">
+                            <img src="img/projects/web/regdp/1.png"
+                                 class="h-60 w-full object-cover group-hover:scale-110 transition duration-500" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-xs">Laravel</span>
+                                <span class="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs">MySQL</span>
+                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">Flutterwave</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-2">Dec 2021 - Mar 2022</p>
+                            <h3 class="text-2xl font-bold mb-3">Regattend — Event Engagement & Digital Banner Platform </h3>
+                            <p class="text-slate-300 mb-5">
+                                An event engagement platform that supports digital banner customization and sharing, alongside event ticketing and reservation functionality.
+                            </p>
+                            <button class="text-sky-400 font-semibold" onclick="openProjectModal(this)">
+                                View Details →
+                            </button>
+                        </div>
+                        <div class="project-desc hidden">
+                            <ul>
+                                <li>Collaborated with the development team on backend API development, database architecture, and frontend components.</li>
+                                <li>Contributed to ticketing and reservation workflows and the implementation of core application features.</li>
+                                <li>Supported the development of functionality for creating and sharing personalized digital event banners, where applicable to individual contributions.</li>
+                            </ul>
+                        </div>
+                        <div class="project-gallery hidden">
+                            <img src="img/projects/web/regdp/2.png" alt="Regattend">
+                            <img src="img/projects/web/regdp/3.png" alt="Regattend">
+                            <img src="img/projects/web/regdp/4.png" alt="Regattend">
+                            <img src="img/projects/web/regdp/5.png" alt="Regattend">
+                        </div>
+                    </article>
+                </div>
+
+                <!-- DESKTOP -->
+                <div id="desktopProjects" class="project-content hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="glass rounded-3xl overflow-hidden group">
+                        <div class="overflow-hidden">
+                            <img src="img/projects/desktop/timer/1.png"
+                                 class="h-60 w-full object-cover group-hover:scale-110 transition duration-500" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">Electron JS</span>
+                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-2">November 2025</p>
+                            <h3 class="text-2xl font-bold mb-3">Event Timer Application</h3>
+                            <p class="text-slate-300 mb-5">
+                                A desktop-based event timing application developed to manage countdowns and display real-time timing notifications for different event activities.
+                            </p>
+                            <button class="text-sky-400 font-semibold" onclick="openProjectModal(this)">
+                                View Details →
+                            </button>
+                        </div>
+                        <div class="project-desc hidden">
+                            <ul>
+                                <li>Developed and packaged a standalone desktop application using Electron.js, HTML, CSS, and JavaScript, without requiring a backend server.</li>
+                                <li>Implemented a dual-window architecture comprising a control window for managing timer operations and a separate display window for projecting countdown information.</li>
+                                <li>Developed timer controls supporting initial time configuration, additional time allocation, time reduction, start, pause, resume, and reset operations.</li>
+                                <li>Implemented event configuration functionality, allowing users to specify event names, upload event logos, and select event categories, including Artistic Performance, Gospel Event, Presentation, and Campaign.</li>
+                                <li>Developed dynamic event-specific display messages that automatically adapt to the selected event category.</li>
+                                <li>Implemented customizable message projection functionality, allowing users to display custom messages and restore the default messages when required.</li>
+                                <li>Integrated dark mode and default display themes, with a customizable event display interface.</li>
+                                <li>Implemented visual countdown alerts that trigger a blinking background with a "ROUND UP!" notification when the remaining time falls below one minute.</li>
+                                <li>Developed an automatic time-expiry notification that changes the display background to red and shows a "TIME UP!" message when the countdown reaches zero.</li>
+                                <li>Implemented an installation password verification mechanism through Electron's main process, requiring users to enter the correct password before completing the application's initial setup.</li>
+                            </ul>
+                        </div>
+                        <div class="project-gallery hidden">
+                            <img src="img/projects/desktop/timer/2.png" alt="Timer App">
+                            <img src="img/projects/desktop/timer/3.png" alt="Timer App">
+                            <img src="img/projects/desktop/timer/4.png" alt="Timer App">
+                            <img src="img/projects/desktop/timer/5.png" alt="Timer App">
+                            <img src="img/projects/desktop/timer/6.png" alt="Timer App">
+                        </div>
+                    </article>
+
+                    <article class="glass rounded-3xl overflow-hidden group">
+                        <div class="overflow-hidden">
+                            <img src="img/projects/desktop/kejinz-inventory/1.png"
+                                 class="h-60 w-full object-cover group-hover:scale-110 transition duration-500" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-pink-500/20 text-pink-400 px-3 py-1 rounded-full text-xs">PHP Desktop</span>
+                                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-xs">SQLite</span>
+                                <span class="bg-sky-500/20 text-sky-400 px-3 py-1 rounded-full text-xs">Laravel</span>
+                                <span class="bg-violet-500/20 text-violet-400 px-3 py-1 rounded-full text-xs">JavaScript</span>
+                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs">Inno Setup</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-2">Aug 2025 - Sep 2025</p>
+                            <h3 class="text-2xl font-bold mb-3">Kejinz Luxury Inventory</h3>
+                            <p class="text-slate-300 mb-5">
+                                A desktop-based inventory and sales management application developed to streamline product management, stock tracking, sales processing, and business reporting for a retail store.
+                            </p>
+                            <button class="text-sky-400 font-semibold" onclick="openProjectModal(this)">
+                                View Details →
+                            </button>
+                        </div>
+                        <div class="project-desc hidden">
+                            <ul>
+                                <li>Developed a complete inventory and sales management application using Laravel, packaged as a standalone desktop application with PHP Desktop.</li>
+                                <li>Implemented SQLite as the database engine, eliminating the need for clients to install and configure XAMPP or a separate database server.</li>
+                                <li>Configured local network access, allowing other devices connected to the host computer's hotspot or network to access the application through a local link. This enabled the store owner to manage products using a mobile phone while sales representatives processed orders through the main system.</li>
+                                <li>Designed and implemented product, category, and subcategory management, including product pricing, cost management, stock quantity updates, and inventory tracking.</li>
+                                <li>Developed stock movement tracking to record sales, new product additions, restocking, quantity adjustments, returned products, and damaged goods.</li>
+                                <li>Built an order processing system with automatic calculations for product quantities, prices, total amounts, payments, outstanding balances, expenditure, and profit.</li>
+                                <li>Implemented customer records, multiple payment methods (bank transfer, cash, debit card, and cheque), and searchable product selection during order creation.</li>
+                                <li>Integrated receipt printing functionality for Xprinter thermal printers, enabling the store to generate and print customer order receipts.</li>
+                                <li>Developed a reporting module with predefined periods and custom date range filtering, providing summaries of total orders, order amounts, payments received, outstanding balances, expenditure, and profit.</li>
+                                <li>Implemented PDF and Excel export functionality for generated reports.</li>
+                                <li>Developed database and media backup and restoration functionality using PHP scripts, ZIP archiving, and SQLite database replacement, allowing the client to back up and restore application data and uploaded files.</li>
+                                <li>Implemented application maintenance functionality, including cache clearing.</li>
+                                <li>Customized the desktop application's identity with the company's logo as its application icon.</li>
+                                <li>Packaged the application into a Windows executable installer (.exe) using Inno Setup, with password protection required to complete installation.</li>
+                            </ul>
+                        </div>
+                        <div class="project-gallery hidden">
+                            <img src="img/projects/desktop/kejinz-inventory/2.png" alt="Kejinz Luxury Inventory">
+                            <img src="img/projects/desktop/kejinz-inventory/3.png" alt="Kejinz Luxury Inventory">
+                            <img src="img/projects/desktop/kejinz-inventory/4.png" alt="Kejinz Luxury Inventory">
+                            <img src="img/projects/desktop/kejinz-inventory/5.png" alt="Kejinz Luxury Inventory">
+                            <img src="img/projects/desktop/kejinz-inventory/6.png" alt="Kejinz Luxury Inventory">
+                        </div>
+                    </article>
+                </div>
+
+                <!-- MOBILE -->
+                <div id="mobileProjects" class="project-content hidden grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Sample mobile project card, ready to restore when projects are available.
+                    <article class="glass rounded-3xl overflow-hidden group">
+                        <div class="overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop"
+                                 class="h-60 w-full object-cover group-hover:scale-110 transition duration-500" alt="">
+                        </div>
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full text-xs">Flutter</span>
+                            </div>
+                            <p class="text-slate-400 text-sm mb-2">Coming Soon</p>
+                            <h3 class="text-2xl font-bold mb-3">Mobile Solutions</h3>
+                            <p class="text-slate-300 mb-5">
+                                Mobile app concepts and future projects built for real-world use.
+                            </p>
+                            <button class="text-sky-400 font-semibold" onclick="openProjectModal(this)">
+                                View Details →
+                            </button>
+                        </div>
+                        <div class="project-gallery hidden">
+                            <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?q=80&w=1200&auto=format&fit=crop" alt="Mobile app screen">
+                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop" alt="Mobile app design">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Mobile application workflow">
+                        </div>
+                    </article>
+                    -->
+                    <div class="relative md:col-span-2 lg:col-span-3 overflow-hidden rounded-3xl glass px-6 py-14 text-center md:px-12 md:py-20">
+                        <div class="absolute -top-20 left-1/4 h-56 w-56 rounded-full bg-sky-500/10 blur-3xl"></div>
+                        <div class="absolute -bottom-24 right-1/4 h-56 w-56 rounded-full bg-violet-500/10 blur-3xl"></div>
+                        <div class="relative mx-auto max-w-2xl">
+                            <div class="relative mx-auto mb-8 flex h-24 w-24 items-center justify-center rounded-[2rem] border border-sky-400/20 bg-sky-400/10 text-4xl text-sky-300 shadow-[0_0_50px_rgba(56,189,248,0.15)]">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                <span class="absolute -right-2 -top-2 flex h-8 w-8 items-center justify-center rounded-full border border-violet-400/20 bg-violet-500/20 text-sm text-violet-300">
+                                    <i class="fa-solid fa-sparkles"></i>
+                                </span>
+                            </div>
+                            <p class="mb-4 text-sm font-semibold uppercase tracking-[5px] text-sky-400">Coming Soon</p>
+                            <h3 class="mb-5 text-3xl font-black md:text-5xl">
+                                Something great is <span class="gradient-text">in the works</span>
+                            </h3>
+                            <p class="mx-auto max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">
+                                I’m crafting thoughtful mobile experiences. Check back soon to see what’s taking shape.
+                            </p>
+                            <div class="mt-8 flex items-center justify-center gap-2" aria-hidden="true">
+                                <span class="h-1.5 w-8 rounded-full bg-sky-400"></span>
+                                <span class="h-1.5 w-3 rounded-full bg-violet-400/60"></span>
+                                <span class="h-1.5 w-3 rounded-full bg-slate-500/50"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- ===================================================== -->
+<!-- PROJECT MODAL -->
+<!-- ===================================================== -->
+
+    <div id="projectModal" class="fixed hidden inset-0 z-50 items-center justify-center bg-black/80 p-2 sm:p-6"
+         role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <div class="glass rounded-3xl sm:rounded-[40px] max-w-5xl w-full max-h-[90vh] overflow-y-auto p-3 sm:p-8 relative">
+            <button type="button" onclick="closeProjectModal()" aria-label="Close project details" class="absolute top-5 right-5 z-10 text-2xl hover:text-sky-400 transition">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="relative mb-2 flex w-full items-center justify-center overflow-hidden rounded-2xl bg-slate-950/40">
+                <img id="projectModalImage" src="" class="block h-auto max-h-[65vh] w-full object-contain" alt="">
+                <button type="button" id="projectPreviousImage" aria-label="Previous project image"
+                        class="absolute left-4 top-1/2 -translate-y-1/2 rounded-full glass px-4 py-3 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button type="button" id="projectNextImage" aria-label="Next project image"
+                        class="absolute right-4 top-1/2 -translate-y-1/2 rounded-full glass px-4 py-3 hover:text-sky-400 transition">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <span id="projectImageCounter" class="absolute bottom-4 right-4 rounded-full glass px-3 py-1 text-sm"></span>
+            </div>
+            <div id="projectImageDots" class="flex justify-center gap-2 mb-6" aria-label="Project image slides"></div>
+
+        <!-- CONTENT -->
+        <div class="p-3 sm:p-8">
+
+            <h3 id="projectModalTitle" class="text-4xl font-extrabold mb-4"></h3>
+
+            <p id="projectModalDescription" class="text-slate-400 leading-relaxed mb-6"></p>
+            <div id="projectFeaturesSection" class="hidden mb-6">
+                <h4 id="projectFeaturesHeading" class="font-bold mb-3">Key Features & Contributions</h4>
+                <div id="project-features" class="text-slate-400 leading-relaxed" aria-labelledby="projectFeaturesHeading">
+                </div>
+            </div>
+            <div id="projectModalTechnologies" class="flex flex-wrap gap-2 mb-8"></div>
+
+            <!-- LINK -->
+            <a id="projectModalWebsite" href="#" target="_blank" rel="noopener noreferrer"
+               class="hidden px-7 py-4 rounded-full bg-blue-500 hover:bg-blue-600 transition font-semibold glow-btn">
+                Visit Project
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- EXPERIENCE SECTION -->
+<!-- ===================================================== -->
+
+<section id="experience" class="pb-24">
+
+    <div class="max-w-5xl mx-auto px-6 lg:px-10">
+
+        <div class="text-center mb-16">
+
+            <p class="text-blue-400 font-semibold tracking-widest uppercase mb-4">
+                Experience
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-extrabold">
+
+                Work
+
+                <span class="gradient-text">
+                    Experience
+                </span>
+
+            </h2>
+
+        </div>
+
+        <div class="space-y-6">
+
+            <!-- ITEM -->
+            <div class="glass rounded-3xl overflow-hidden">
+
+                <button
+                    class="accordion-btn w-full flex items-center justify-between p-6 text-left">
+
+                    <div class="flex items-center gap-5">
+
+                        <img
+                            src="img/experience/digital-roah-logo.png"
+                            class="w-20 h-20 rounded-2xl object-cover bg-white"
+                            alt=""
+                        />
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold">
+                                Contract Lead Developer
+                            </h3>
+
+                            <p class="text-slate-400">
+                                Digital Roah Services, Jos, Nigeria <span class="px-2">|</span> Mar 2020 - Present
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+
+                </button>
+
+                <div class="accordion-content hidden px-6 pb-6">
+
+                    <p class="text-slate-400 leading-relaxed">
+                        Progressed from frontend development to backend and full-stack development, subsequently taking on contract lead developer responsibilities.
+                    </p>
+
+                    <h4 class="mt-3 mb-2">Responsibilities and contributions</h5>
+                    <ul class="list-disc space-y-2 pl-5 text-slate-400">
+                        <li>Develop and maintain client web applications using Laravel, PHP, JavaScript, and relational databases.</li>
+                        <li>Implement backend business logic, database operations, RESTful APIs, and application workflows.</li>
+                        <li>Collaborate with development teams to translate client requirements into functional software features and complete web application solutions.</li>
+                        <li><b>Regattend:</b> Collaborated on backend API development, database architecture, and frontend components for an event engagement platform; contributed to ticketing, reservations, and core feature implementation.</li>
+                        <li><b>Rivers State College of Nursing Sciences, Port Harcourt:</b> Developed the institution's public website and admission portal, implementing frontend interfaces and backend functionality for institutional information and admission workflows.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM -->
+            <div class="glass rounded-3xl overflow-hidden">
+
+                <button
+                    class="accordion-btn w-full flex items-center justify-between p-6 text-left">
+
+                    <div class="flex items-center gap-5">
+
+                        <img
+                            src="img/experience/bluehouse-logo.png"
+                            class="w-20 h-20 rounded-2xl object-cover bg-white"
+                            alt=""
+                        />
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold">
+                                IoT Intern
+                            </h3>
+
+                            <p class="text-slate-400">
+                                Bluehouse Technologies, Jos, Nigeria <span class="px-2">|</span> Mar 2025 - Sep 2025
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+
+                </button>
+
+                <div class="accordion-content hidden px-6 pb-6">
+
+                    <ul class="list-disc space-y-2 pl-5 text-slate-400">
+                        <li>Participated in embedded systems and automation projects.</li>
+                        <li>Worked on prototypes involving temperature control and environmental monitoring.</li>
+                        <li>Gained practical exposure to microcontroller-based systems and hardware-software integration.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM -->
+            <div class="glass rounded-3xl overflow-hidden">
+
+                <button
+                    class="accordion-btn w-full flex items-center justify-between p-6 text-left">
+
+                    <div class="flex items-center gap-5">
+
+                        <img
+                            src="img/experience/bluehouse-logo.png"
+                            class="w-20 h-20 rounded-2xl object-cover bg-white"
+                            alt=""
+                        />
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold">
+                                Data Science Intern
+                            </h3>
+
+                            <p class="text-slate-400">
+                                Bluehouse Technologies, Jos, Nigeria <span class="px-2">|</span> Mar 2025 - Sep 2025
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+
+                </button>
+
+                <div class="accordion-content hidden px-6 pb-6">
+
+                    <ul class="list-disc space-y-2 pl-5 text-slate-400">
+                        <li>Conducted exploratory analysis and statistical evaluations using sample datasets.</li>
+                        <li>Applied statistical methods, including t-tests, to compare datasets and investigate research questions.</li>
+                        <li>Developed practical familiarity with quantitative analysis and data interpretation.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM -->
+            <div class="glass rounded-3xl overflow-hidden">
+
+                <button
+                    class="accordion-btn w-full flex items-center justify-between p-6 text-left">
+
+                    <div class="flex items-center gap-5">
+
+                        <img
+                            src="img/experience/eict-logo.png"
+                            class="w-20 h-20 rounded-2xl object-cover bg-white"
+                            alt=""
+                        />
+
+                        <div>
+
+                            <h3 class="text-2xl font-bold">
+                                Computer Hardware Engineering Intern
+                            </h3>
+
+                            <p class="text-slate-400">
+                                Ecwa International College of Technology, Jos, Nigeria <span class="px-2">|</span> Jul 2024 - Aug 2024
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down accordion-icon"></i>
+
+                </button>
+
+                <div class="accordion-content hidden px-6 pb-6">
+
+                    <ul class="list-disc space-y-2 pl-5 text-slate-400">
+                        <li>Completed a two-month internship programme focused on computer hardware engineering and IT support.</li>
+                        <li>Gained exposure to networking, computer maintenance, and basic IT infrastructure.</li>
+                        <li>Developed foundational troubleshooting and technical support skills.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- EDUCATION SECTION -->
+<!-- ===================================================== -->
+
+<section id="education" class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="text-center mb-16">
+
+            <p class="text-blue-400 font-semibold tracking-widest uppercase mb-4">
+                Education
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-extrabold">
+
+                Academic
+
+                <span class="gradient-text">
+                    Journey
+                </span>
+
+            </h2>
+
+        </div>
+
+        <div class="glass rounded-[40px] p-8 lg:p-12 grid lg:grid-cols-2 gap-10 items-center">
+
+            <img
+                src="img/unijos-banner.jpg"
+                class="rounded-3xl w-full object-cover"
+                alt="University"
+            />
+
+            <div>
+
+                <p class="text-blue-400 font-semibold uppercase tracking-widest mb-4">
+                    2020 - 2026
+                </p>
+
+                <h3 class="text-4xl font-extrabold mb-6 leading-snug">
+                    B.Eng. Electrical/Electronics Engineering
+                </h3>
+
+                <p class="text-slate-400 leading-relaxed mb-8">
+
+                    Academic exposure to embedded systems,
+                    electronics, PCB design fundamentals,
+                    programming and software engineering concepts.
+
+                </p>
+
+                <a href="https://www.unijos.edu.ng/" target="_blank"
+                   class="inline-flex items-center gap-3 text-blue-400 font-semibold hover:text-blue-300 transition">
+
+                    Visit School Website
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- BLOG SECTION -->
+<!-- ===================================================== -->
+
+<section id="blog" class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="text-center mb-16">
+
+            <p class="text-blue-400 font-semibold tracking-widest uppercase mb-4">
+                Blog
+            </p>
+
+            <h2 class="text-4xl lg:text-6xl font-extrabold">
+
+                Latest
+
+                <span class="gradient-text">
+                    Articles
+                </span>
+
+            </h2>
+
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="glass rounded-3xl overflow-hidden">
+
+                <img
+                    src="img/blogs/non-technical.png"
+                    class="h-60 w-full object-cover"
+                    alt=""
+                />
+
+                <div class="p-6">
+
+                    <p class="text-emerald-400 text-sm font-semibold mb-3">
+                        User Experience
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4">
+                        How I Built Systems That Non-Technical Clients Could Actually Manage
+                    </h3>
+
+                    <a href="https://medium.com/@orizudc/how-i-built-systems-that-non-technical-clients-could-actually-manage-41cafad7e9a9" target="_blank"
+                       class="text-blue-400 font-semibold hover:text-blue-300 transition">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="glass rounded-3xl overflow-hidden">
+
+                <img
+                    src="img/blogs/laravel-fintech.png"
+                    class="h-60 w-full object-cover"
+                    alt=""
+                />
+
+                <div class="p-6">
+
+                    <p class="text-violet-400 text-sm font-semibold mb-3">
+                        Laravel • Backend
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4">
+                        Laravel Fintech Best Practices: Lessons Learned Building a Loan Management System
+                    </h3>
+
+                    <a href="https://medium.com/@orizudc/laravel-fintech-best-practices-lessons-learned-building-a-loan-management-system-bddead2d54dc" target="_blank"
+                       class="text-blue-400 font-semibold hover:text-blue-300 transition">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- <div class="glass rounded-3xl overflow-hidden">
+
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+                    class="h-60 w-full object-cover"
+                    alt=""
+                />
+
+                <div class="p-6">
+
+                    <p class="text-violet-400 text-sm font-semibold mb-3">
+                        Python • Data Science
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4">
+                        My First Steps Into Machine Learning
+                    </h3>
+
+                    <a href="#"
+                       class="text-blue-400 font-semibold hover:text-blue-300 transition">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="glass rounded-3xl overflow-hidden">
+
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop"
+                    class="h-60 w-full object-cover"
+                    alt=""
+                />
+
+                <div class="p-6">
+
+                    <p class="text-emerald-400 text-sm font-semibold mb-3">
+                        Electron JS • Desktop Apps
+                    </p>
+
+                    <h3 class="text-2xl font-bold mb-4">
+                        Building Offline Desktop Applications
+                    </h3>
+
+                    <a href="#"
+                       class="text-blue-400 font-semibold hover:text-blue-300 transition">
+
+                        Read Article →
+
+                    </a>
+
+                </div>
+
+            </div> -->
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- CONTACT SECTION -->
+<!-- ===================================================== -->
+
+<section id="contact" class="pb-24">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+
+        <div class="glass rounded-[40px] p-8 lg:p-14 grid lg:grid-cols-2 gap-16 items-center">
+
+            <!-- LEFT -->
+            <div>
+
+                <p class="text-blue-400 font-semibold tracking-widest uppercase mb-4">
+                    Contact Me
+                </p>
+
+                <h2 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-6">
+
+                    Let's Build
+                    Something <span class="gradient-text">Amazing</span>
+
+                </h2>
+
+                <p class="text-slate-400 text-lg leading-relaxed mb-10">
+
+                    Open for freelance projects, collaborations,
+                    internships and backend engineering opportunities.
+
+                </p>
+
+                <div class="space-y-6">
+
+                    <div class="flex items-center gap-5">
+
+                        <div class="w-14 h-14 rounded-2xl bg-blue-500 flex items-center justify-center">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-slate-500 text-sm">
+                                Email
+                            </p>
+
+                            <h3 class="font-semibold">
+                                orizudc@gmail.com
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <div class="flex items-center gap-5">
+
+                        <div class="w-14 h-14 rounded-2xl bg-violet-500 flex items-center justify-center">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                        </div>
+
+                        <div>
+
+                            <p class="text-slate-500 text-sm">
+                                Location
+                            </p>
+
+                            <h3 class="font-semibold">
+                                Nigeria
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- FORM -->
+            <form class="space-y-6">
+
+                <div class="grid md:grid-cols-2 gap-6">
+
+                    <input
+                        type="text"
+                        placeholder="Your Name"
+                        class="glass rounded-2xl px-5 py-4 bg-transparent outline-none w-full"
+                    />
+
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        class="glass rounded-2xl px-5 py-4 bg-transparent outline-none w-full"
+                    />
+
+                </div>
+
+                <input
+                    type="text"
+                    placeholder="Subject"
+                    class="glass rounded-2xl px-5 py-4 bg-transparent outline-none w-full"
+                />
+
+                <textarea
+                    rows="6"
+                    placeholder="Your Message"
+                    class="glass rounded-2xl px-5 py-4 bg-transparent outline-none w-full resize-none"></textarea>
+
+                <button
+                    type="submit"
+                    class="px-8 py-4 rounded-full bg-blue-500 hover:bg-blue-600 transition font-semibold glow-btn">
+
+                    Send Message
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- FOOTER -->
+<!-- ===================================================== -->
+
+<footer class="border-t border-slate-800">
+
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+
+        <p class="text-slate-500">
+            © 2026 David Orizu. All rights reserved.
+        </p>
+
+        <p class="text-slate-500">
+            Built with HTML, Tailwind CSS & JavaScript
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- ===================================================== -->
+<!-- JAVASCRIPT -->
+<!-- ===================================================== -->
+
+<script>
+
+    // MOBILE MENU
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuBtn.addEventListener('click', () => {
+
+        mobileMenu.classList.toggle('show');
+
+    });
+
+        // Project tabs
+        const tabButtons = document.querySelectorAll('.project-tab');
+        const projectGroups = document.querySelectorAll('.project-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const target = button.getAttribute('data-target');
+
+                projectGroups.forEach(group => group.classList.add('hidden'));
+                document.getElementById(target).classList.remove('hidden');
+
+                tabButtons.forEach(btn => btn.classList.remove('tab-active'));
+                button.classList.add('tab-active');
+            });
+        });
+
+    // PROJECT MODAL
+    const projectModal = document.getElementById('projectModal');
+    const projectModalImage = document.getElementById('projectModalImage');
+    const projectImageCounter = document.getElementById('projectImageCounter');
+    const projectImageDots = document.getElementById('projectImageDots');
+    const projectModalWebsite = document.getElementById('projectModalWebsite');
+    let activeProjectImages = [];
+    let activeProjectImageIndex = 0;
+    let lastFocusedElement = null;
+
+    function showProjectImage(index){
+        if(activeProjectImages.length === 0){
+            return;
+        }
+
+        activeProjectImageIndex = (index + activeProjectImages.length) % activeProjectImages.length;
+        const image = activeProjectImages[activeProjectImageIndex];
+
+        projectModalImage.src = image.src;
+        projectModalImage.alt = image.alt;
+        projectImageCounter.textContent = `${activeProjectImageIndex + 1} / ${activeProjectImages.length}`;
+
+        projectImageDots.querySelectorAll('button').forEach((dot, dotIndex) => {
+            dot.classList.toggle('bg-sky-400', dotIndex === activeProjectImageIndex);
+            dot.classList.toggle('bg-white/30', dotIndex !== activeProjectImageIndex);
+            dot.setAttribute('aria-current', dotIndex === activeProjectImageIndex ? 'true' : 'false');
+        });
+    }
+
+    function openProjectModal(button){
+        const project = button.closest('article');
+        const title = project.querySelector('h3').textContent.trim();
+        const description = project.querySelector('.p-6 p.text-slate-300').textContent.trim();
+        const technologies = project.querySelectorAll('.p-6 .flex span');
+        const mainImage = project.querySelector('img');
+        const galleryImages = project.querySelectorAll('.project-gallery img');
+        const websiteLink = project.querySelector('.project-website-link');
+        const projectFeatures = project.querySelector('.project-desc ul');
+
+        document.getElementById('projectModalTitle').textContent = title;
+        document.getElementById('projectModalDescription').textContent = description;
+        const featuresSection = document.getElementById('projectFeaturesSection');
+        const featuresContainer = document.getElementById('project-features');
+        featuresContainer.replaceChildren();
+        if(projectFeatures){
+            const featuresList = projectFeatures.cloneNode(true);
+            featuresList.classList.add('list-disc', 'space-y-2', 'pl-5');
+            featuresContainer.appendChild(featuresList);
+            featuresSection.classList.remove('hidden');
+        }else{
+            featuresSection.classList.add('hidden');
+        }
+        const technologyContainer = document.getElementById('projectModalTechnologies');
+        technologyContainer.replaceChildren();
+        technologies.forEach(technology => {
+            const badge = document.createElement('span');
+            badge.className = 'rounded-full bg-sky-500/20 px-3 py-1 text-xs text-sky-400';
+            badge.textContent = technology.textContent.trim();
+            technologyContainer.appendChild(badge);
+        });
+
+        activeProjectImages = [
+            { src: mainImage.src, alt: mainImage.alt || `${title} screenshot` },
+            ...Array.from(galleryImages, image => ({ src: image.src, alt: image.alt }))
+        ];
+        projectImageDots.replaceChildren();
+        activeProjectImages.forEach((image, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'h-2.5 w-2.5 rounded-full transition';
+            dot.setAttribute('aria-label', `Show image ${index + 1} of ${activeProjectImages.length}`);
+            dot.addEventListener('click', () => showProjectImage(index));
+            projectImageDots.appendChild(dot);
+        });
+        showProjectImage(0);
+
+        if(websiteLink){
+            projectModalWebsite.href = websiteLink.href;
+            projectModalWebsite.classList.remove('hidden');
+            projectModalWebsite.classList.add('inline-flex');
+        }else{
+            projectModalWebsite.classList.add('hidden');
+            projectModalWebsite.classList.remove('inline-flex');
+        }
+
+        lastFocusedElement = button;
+        projectModal.classList.remove('hidden');
+        projectModal.classList.add('flex');
+        projectModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        projectModal.querySelector('button[aria-label="Close project details"]').focus();
+    }
+
+    function closeProjectModal(){
+        projectModal.classList.add('hidden');
+        projectModal.classList.remove('flex');
+        projectModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        if(lastFocusedElement){
+            lastFocusedElement.focus();
+        }
+    }
+
+    document.getElementById('projectPreviousImage').addEventListener('click', () => {
+        showProjectImage(activeProjectImageIndex - 1);
+    });
+
+    document.getElementById('projectNextImage').addEventListener('click', () => {
+        showProjectImage(activeProjectImageIndex + 1);
+    });
+
+    // CLOSE MODAL ON BACKDROP CLICK
+    projectModal.addEventListener('click', (e) => {
+
+        if(e.target === projectModal){
+
+            closeProjectModal();
+
+        }
+
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if(projectModal.classList.contains('hidden')){
+            return;
+        }
+
+        if(e.key === 'Escape'){
+            closeProjectModal();
+        }else if(e.key === 'ArrowLeft'){
+            showProjectImage(activeProjectImageIndex - 1);
+        }else if(e.key === 'ArrowRight'){
+            showProjectImage(activeProjectImageIndex + 1);
+        }
+    });
+
+    // ACCORDION
+    const accordionBtns = document.querySelectorAll('.accordion-btn');
+
+    accordionBtns.forEach(btn => {
+
+        btn.addEventListener('click', () => {
+
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('.accordion-icon');
+
+            content.classList.toggle('hidden');
+
+            icon.classList.toggle('rotate-180');
+
+        });
+
+    });
+
+    // CLOSE MOBILE MENU WHEN LINK CLICKED
+    const mobileLinks = document.querySelectorAll('#mobileMenu a');
+
+    mobileLinks.forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            mobileMenu.classList.remove('show');
+
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
