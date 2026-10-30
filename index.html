@@ -1809,6 +1809,8 @@
                     class="glass rounded-2xl px-5 py-4 bg-transparent outline-none w-full resize-none"
                 ></textarea>
 
+                <!-- Success/Error Alert Here -->
+
                 <button
                     type="submit"
                     id="submit-btn"
@@ -2049,6 +2051,7 @@
 </script>
 
 <!-- Contact Form Script -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 
     const contactForm = document.getElementById('contact-form');
@@ -2081,19 +2084,34 @@
 
             if (response.ok && result.success) {
 
-                alert('Thank you! Your message has been sent successfully.');
+                await Swal.fire({
+                    title: 'Message sent!',
+                    text: 'Thank you! Your message has been sent successfully.',
+                    icon: 'success',
+                    confirmButtonColor: '#3b82f6'
+                });
 
                 contactForm.reset();
 
             } else {
 
-                alert(result.message || 'Unable to send your message. Please try again.');
+                await Swal.fire({
+                    title: 'Unable to send message',
+                    text: result.message || 'Unable to send your message. Please try again.',
+                    icon: 'error',
+                    confirmButtonColor: '#3b82f6'
+                });
 
             }
 
         } catch (error) {
 
-            alert('Something went wrong. Please check your internet connection and try again.');
+            await Swal.fire({
+                title: 'Something went wrong',
+                text: 'Please check your internet connection and try again.',
+                icon: 'error',
+                confirmButtonColor: '#3b82f6'
+            });
 
             console.error('Contact Form Error:', error);
 
