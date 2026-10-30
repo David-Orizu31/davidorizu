@@ -32,9 +32,22 @@
             scroll-behavior: smooth;
         }
 
+        html,
+        body{
+            max-width: 100%;
+            overflow-x: clip;
+        }
+
         body{
             background: #0f172a;
-            overflow-x: hidden;
+        }
+
+        .hero-glow{
+            left: 50%;
+            top: 50%;
+            width: min(420px, calc(100vw - 3rem));
+            height: min(420px, calc(100vw - 3rem));
+            transform: translate(-50%, -50%);
         }
 
         .hero-gradient{
@@ -340,17 +353,17 @@
         <div class="relative flex justify-center lg:justify-end">
 
             <!-- BACKGROUND -->
-            <div class="absolute w-[420px] h-[420px] bg-blue-500/20 blur-3xl rounded-full"></div>
+            <div class="hero-glow absolute bg-blue-500/20 blur-3xl rounded-full"></div>
 
             <!-- CARD -->
-            <div class="relative glass p-6 rounded-[40px] floating">
+            <div class="relative glass p-4 sm:p-6 rounded-[40px] floating">
 
                 <div class="avatar-ring rounded-full p-2 bg-gradient-to-r from-blue-500 to-violet-500">
 
                     <img
                         src="img/profile-pic.jpeg"
                         alt="David Orizu"
-                        class="w-[320px] h-[320px] object-cover rounded-full border-4 border-slate-900"
+                        class="block w-64 h-64 sm:w-[320px] sm:h-[320px] object-cover rounded-full border-4 border-slate-900"
                     />
 
                 </div>
@@ -1216,7 +1229,7 @@
         <!-- CONTENT -->
         <div class="p-3 sm:p-8">
 
-            <h3 id="projectModalTitle" class="text-4xl font-extrabold mb-4"></h3>
+            <h3 id="projectModalTitle" class="text-2xl sm:text-4xl font-extrabold mb-4 break-words"></h3>
 
             <p id="projectModalDescription" class="text-slate-400 leading-relaxed mb-6"></p>
             <div id="projectFeaturesSection" class="hidden mb-6">
@@ -1481,21 +1494,21 @@
 
         </div>
 
-        <div class="glass rounded-[40px] p-8 lg:p-12 grid lg:grid-cols-2 gap-10 items-center">
+        <div class="glass rounded-[40px] p-4 sm:p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-center min-w-0">
 
             <img
                 src="img/unijos-banner.jpg"
-                class="rounded-3xl w-full object-cover"
+                class="block rounded-3xl w-full max-w-full min-w-0 h-auto object-contain"
                 alt="University"
             />
 
-            <div>
+            <div class="min-w-0">
 
                 <p class="text-blue-400 font-semibold uppercase tracking-widest mb-4">
                     2020 - 2026
                 </p>
 
-                <h3 class="text-4xl font-extrabold mb-6 leading-snug">
+                <h3 class="text-2xl sm:text-4xl font-extrabold mb-6 leading-snug">
                     B.Eng. Electrical/Electronics Engineering
                 </h3>
 
